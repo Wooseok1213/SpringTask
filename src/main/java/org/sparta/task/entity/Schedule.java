@@ -1,29 +1,34 @@
 package org.sparta.task.entity;
 
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.sparta.task.Dto.ScheduleRequestDto;
 
-import java.time.LocalDate;
+//import java.time.LocalDate;
 
+@Entity // JPA가 관리할 수 있는 Entity 클래스 지정
 @Getter
 @Setter
+@Table(name = "schedule") // 매핑할 테이블의 이름을 지정
 @NoArgsConstructor
-public class Schedule {
+
+public class Schedule extends Timestamped {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
     private String title;
     private String contents;
     private String manager;
-    private String date;
-    private int password;
+    private String password;
 
     public Schedule(ScheduleRequestDto requestDto) {
         this.title = requestDto.getTitle();
         this.contents = requestDto.getContents();
         this.manager = requestDto.getManager();
         this.password = requestDto.getPassword();
-        this.date = requestDto.getDate();
     }
 
     public void update(ScheduleRequestDto requestDto) {
@@ -31,7 +36,6 @@ public class Schedule {
         this.contents = requestDto.getContents();
         this.manager = requestDto.getManager();
         this.password = requestDto.getPassword();
-        this.date = requestDto.getDate();
     }
 }
 
