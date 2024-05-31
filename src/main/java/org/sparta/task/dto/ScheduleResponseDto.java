@@ -1,4 +1,4 @@
-package org.sparta.task.Dto;
+package org.sparta.task.dto;
 
 import lombok.Getter;
 import org.sparta.task.entity.Schedule;

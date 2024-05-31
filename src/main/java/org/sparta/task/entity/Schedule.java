@@ -4,7 +4,11 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.sparta.task.Dto.ScheduleRequestDto;
+import org.sparta.task.dto.ScheduleRequestDto;
+import org.springframework.scheduling.config.Task;
+
+import java.util.ArrayList;
+import java.util.List;
 
 //import java.time.LocalDate;
 
@@ -17,7 +21,6 @@ import org.sparta.task.Dto.ScheduleRequestDto;
 public class Schedule extends Timestamped {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Long id;
     private String title;
     private String contents;

@@ -1,4 +1,4 @@
-package org.sparta.task.Dto;
+package org.sparta.task.dto;
 
 import lombok.Getter;
 
@@ -9,5 +9,4 @@ public class ScheduleRequestDto {
     private String manager;
     private String date;
     private String password;
-
 }

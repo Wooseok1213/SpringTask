@@ -1,9 +1,9 @@
-package org.sparta.task.scheduleService;
+package org.sparta.task.service;
 
-import org.sparta.task.Dto.ScheduleRequestDto;
-import org.sparta.task.Dto.ScheduleResponseDto;
+import org.sparta.task.dto.ScheduleRequestDto;
+import org.sparta.task.dto.ScheduleResponseDto;
 import org.sparta.task.entity.Schedule;
-import org.sparta.task.scheduleRepository.ScheduleRepository;
+import org.sparta.task.repository.ScheduleRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
